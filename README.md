@@ -179,5 +179,7 @@ describe('hooks', function() {
 ```
 
 ## Explain, using relevant examples, different ways to mock out databases, HTTP-request etc.
-I have used this mock test to test a GET method using chai but also using Nock
+I have used this mock test to test a GET method using chai but also using Nock.
+
+Nock is a Node module for mocking HTTP requests. With Nock you can mock a HTTP request and make it always return a specific result.
 - [Mock Test](https://github.com/KongBoje/Hand-in-2/blob/master/expressJokes/test/mocktest.js)

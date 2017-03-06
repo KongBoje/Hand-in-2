@@ -169,3 +169,5 @@ describe('hooks', function() {
 ```
 
 ## Explain, using relevant examples, different ways to mock out databases, HTTP-request etc.
+I have used this mock test to test a GET method using chai but also using Nock
+- [Mock Test](https://github.com/KongBoje/Hand-in-2/blob/master/expressJokes/test/mocktest.js)

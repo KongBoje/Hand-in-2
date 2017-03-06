@@ -30,7 +30,8 @@
 - For scaling throughout on a webservice, you should run multiple Node.js servers on one or more machine/es, one per core and split request traffic between them. This provides excellent CPU-affinity and will scale throughout nearly linearly with core count. You could also put a load balancer in front of it. The load balancer will balance the load of incoming requests, thus achieving a multicore solution
 
 ## Explain, using relevant examples, concepts related to the testing a REST-API using Node/JavaScript + relevant packages
-
+For the tests I have used chai and mocha, you first describe the test and then what "it" should do.
+- [Test](https://github.com/KongBoje/Hand-in-2/blob/master/expressJokes/test/restAPITest.js)
 
 ## Explain, using relevant examples, the Express concept; middleware.
 

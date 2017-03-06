@@ -141,6 +141,28 @@ And handled it in App.js:
 angular part: TBD
 
 ## Explain, using relevant examples, about testing JavaScript code, relevant packages (Mocha etc.) and how to test asynchronous code.
+Mocha: Mocha is a test framework running on Node.js and can be used to test synchronous and asynchronous functions. Mocha tests run serially, allowing for flexible and accurate reporting, while mapping uncaught exceptions to the correct test cases. -> "describe" + "it".
+
+Chai: Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework. -> "should" + "expect" + "assert". request: Request is designed to be the simplest way possible to make http calls. It supports HTTPS and follows redirects by default.
+```
+//var expect = require("chai").expect;
+const {expect} = require("chai"); //es6 way of doing it
+
+describe("Testing async behaviour", function () {
+    var foo = false;
+    before(function (done) { //done callback
+        setTimeout(function () {
+            foo = true
+            done(); // test fails without this
+        }, 1000);
+    });
+
+    it("should pass (with done called)", function () {
+        expect(foo).to.equal(true);
+    })
+})
+```
+
 Testing the indexOf method on an array with 3 values:
 ```javascript
 var assert = require('chai').assert;
@@ -155,6 +177,8 @@ describe('Array', function() {
 ```
 
 Working with hooks:
+
+With its default “BDD”-style interface, Mocha provides the hooks before(), after(), beforeEach(), and afterEach(). These should be used to set up preconditions and clean up after your tests.
 ```javascript
 describe('hooks', function() {
 

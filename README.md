@@ -80,7 +80,52 @@ To retrieve the session, we can do the following on the `req` object, and also a
 A cookie consent has to be implemented on the site, if the cookie is used to track user behaviour.
 
 ## Compare the express strategy toward (server side) templating with the one you used with Java on second semester.
+Node.JS and Express uses templating engines like Handlebars, Jade and EJS. Java uses templating engines like JSP. Java was never made to be suitable for web applications, and JSP is often seen as a makeshift solution.
 
+**MVC**:
+- Java: Model --> Controller --> Servlet --> JSP
+
+- Express.js: Model --> Controller/Router --> Handlebars/Jade/EJS
+
+#### Example 1 (Passing variables to a view in Express)
+Node.js + Express.js:
+```javascript
+router.get('/dashboard', isLoggedIn, function (req, res) {
+    res.render('dashboard', {
+        title: 'Dashboard',
+        subtitle: 'Hello dashboard'
+    });
+});
+```
+Java + JSP
+```java
+protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        RequestDispatcher rd = null;
+        HttpSession session = request.getSession();
+        session.setMaxInactiveInterval(30 * 60);
+
+        session.setAttribute("title", "Dashboard");
+        session.setAttribute("subtitle", "Hello dashboard");
+        rd = request.getRequestDispatcher("dashboard.jsp");
+        rd.forward(request, response);
+
+}
+```
+
+#### Example 2 (Retrieving a session variable on the front end with Handlebars)
+Node.js + Express.js:
+```html
+<h1>{{title}}</h1>
+<h2>{{subtitle}}</h2>
+```
+Java + JSP
+```jsp
+<h1><%= session.getAttribute("title"); %></h1>
+<h2><%= session.getAttribute("subtitle"); %></h2>
+```
+- Conclusion: use node.js Express for server side templating.
 
 ## Explain, using a relevant examples, your strategy for implementing a REST-API with Node/Express and show how you can "test" all the four CRUD operations programmatically using for example the Request package.
 

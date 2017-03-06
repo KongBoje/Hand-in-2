@@ -1,0 +1,17 @@
+{
+  "name": "calculatordemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node moduleDemo/calculator/lib/calculator.js",
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "nock": "^9.0.9"
+  }
+}

@@ -1,7 +1,7 @@
 # Hand-in 2, JavaScript-express.
 
 # Explain and Reflect
-### All test exercises are in the expressJokes file.
+### All test exercises are in the expressJokes file, except for the calculator test exercise which is the calculatorDemo file.
 ## Why would you consider a Scripting Language as JavaScript as your Backend Platform.
 - It's easy and fast to build and setup a working network application with node.js and the right editor.
 - It's very handy that you can use the same language both in front-end and in the back-end.

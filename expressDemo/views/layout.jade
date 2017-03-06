@@ -1,0 +1,9 @@
+//The file layout.jade creates a skeleton html-file as sketched below when it gets compiled. 
+//It is not meant to be used by itself. The other two files "extends" this file and provides the actual content for the content part.
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    block content

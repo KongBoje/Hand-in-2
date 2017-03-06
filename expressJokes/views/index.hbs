@@ -1,0 +1,16 @@
+<h1>{{title}}</h1>
+<p>Welcome {{username}}, up for some jokes?</p>
+
+<ul>
+    <li><a href="/joke">Random joke</a></li>
+    <li><a href="/jokes">All jokes</a></li>
+    <li><a href="addJoke">Add a joke</a></li>
+</ul>
+
+<h3>Counters</h3>
+<ul>
+    {{#each counters as |value key|}}
+        <li>{{key}}: {{value}}</li>
+    {{/each}}
+
+</ul>

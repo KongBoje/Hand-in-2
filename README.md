@@ -23,11 +23,11 @@
 
 ## Node.js uses a Single Threaded Non-blocking strategy to handle asynchronous task. Explain strategies to implement a Node.js based server architecture that still could take advantage of a multi-core Server.
 
-#### Solution 1 
+#### Solution 1 (built it)
+- Node.js does not come with mutlithreading out of the box, since it's single threaded, but it is possible to build and program it yourself. We just haven't done that in class.
 
-
-#### Solution 2
-
+#### Solution 2 (Multiple servers)
+- For scaling throughout on a webservice, you should run multiple Node.js servers on one or more machine/es, one per core and split request traffic between them. This provides excellent CPU-affinity and will scale throughout nearly linearly with core count. You could also put a load balancer in front of it. The load balancer will balance the load of incoming requests, thus achieving a multicore solution
 
 ## Explain, using relevant examples, concepts related to the testing a REST-API using Node/JavaScript + relevant packages
 

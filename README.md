@@ -57,7 +57,27 @@ router.post('/', function (req, res) {
 ```
 
 ## Explain, using relevant examples, how to implement sessions, and the legal implications of doing this.
+To enable the use of the session we have to require the module `express-session`. This module was earlier integrated into Express.js but was removed to make the framework more lightweight:
+```javascript
+var session = require('express-session');
+```
 
+We enable the session with the following middleware:
+```javascript
+app.use(session({
+    secret: '50ac41d0f8eff5655213',
+    saveUninitialized: false,
+    resave: true
+}));
+```
+
+To retrieve the session, we can do the following on the `req` object, and also add properties to it:
+```javascript
+    var session = req.session;
+    session.username = "michael";
+```
+
+A cookie consent has to be implemented on the site, if the cookie is used to track user behaviour.
 
 ## Compare the express strategy toward (server side) templating with the one you used with Java on second semester.
 

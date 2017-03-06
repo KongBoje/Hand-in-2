@@ -129,9 +129,11 @@ Java + JSP
 
 ## Explain, using a relevant examples, your strategy for implementing a REST-API with Node/Express and show how you can "test" all the four CRUD operations programmatically using for example the Request package.
 I first implemented a router.get api for a joke here:
-- [api.js](https://github.com/KongBoje/Hand-in-2/blob/master/expressJokes/routes/api.js)<br />
+- [api.js](https://github.com/KongBoje/Hand-in-2/blob/master/expressJokes/routes/api.js)
+
 Aswell as two GET requests and a POST request in the index.js:
-- [Index.js](https://github.com/KongBoje/Hand-in-2/blob/master/expressJokes/routes/index.js)<br />
+- [Index.js](https://github.com/KongBoje/Hand-in-2/blob/master/expressJokes/routes/index.js)
+
 And handled it in App.js:
 - [App.js](https://github.com/KongBoje/Hand-in-2/blob/master/expressJokes/app.js)
 

@@ -2,12 +2,12 @@
 
 # Explain and Reflect
 ### All test exercises are in the expressJokes file, except for the calculator test exercise which is the calculatorDemo file.
-## Why would you consider a Scripting Language as JavaScript as your Backend Platform.
+>## Why would you consider a Scripting Language as JavaScript as your Backend Platform.
 - It's easy and fast to build and setup a working network application with node.js and the right editor.
 - It's very handy that you can use the same language both in front-end and in the back-end.
 - Not a lot of code is required for an application to run.
 
-## Explain Pros & Cons in using Node.js + Express to implement your Backend compared to a strategy using for example Java/JAX-RS/Tomcat
+>## Explain Pros & Cons in using Node.js + Express to implement your Backend compared to a strategy using for example Java/JAX-RS/Tomcat
 
 ### Pros
 - You can make a good and responsive network application, if done right.
@@ -22,7 +22,7 @@
 - Java as oppposed to Node.JS + Express is a strictly typed language which provides a certain security.
 - 500 errors in Node.JS and Express will crash the entire application, Java will not.
 
-## Node.js uses a Single Threaded Non-blocking strategy to handle asynchronous task. Explain strategies to implement a Node.js based server architecture that still could take advantage of a multi-core Server.
+>## Node.js uses a Single Threaded Non-blocking strategy to handle asynchronous task. Explain strategies to implement a Node.js based server architecture that still could take advantage of a multi-core Server.
 
 #### Solution 1 (built it)
 - Node.js does not come with mutlithreading out of the box, since it's single threaded, but it is possible to build and program it yourself. We just haven't done that in class.
@@ -30,11 +30,11 @@
 #### Solution 2 (Multiple servers)
 - For scaling throughout on a webservice, you should run multiple Node.js servers on one or more machine/es, one per core and split request traffic between them. This provides excellent CPU-affinity and will scale throughout nearly linearly with core count. You could also put a load balancer in front of it. The load balancer will balance the load of incoming requests, thus achieving a multicore solution
 
-## Explain, using relevant examples, concepts related to the testing a REST-API using Node/JavaScript + relevant packages
+>## Explain, using relevant examples, concepts related to the testing a REST-API using Node/JavaScript + relevant packages
 For the tests I have used chai and mocha, you first describe the test and then what "it" should do, aswell as a before and after the test.
 - [Test](https://github.com/KongBoje/Hand-in-2/blob/master/expressJokes/test/restAPITest.js)
 
-## Explain, using relevant examples, the Express concept; middleware.
+>## Explain, using relevant examples, the Express concept; middleware.
 Middleware functions are functions that you bind to the express instance and works as a way to configure/add functionality between requests:
 
 - **Application level middleware**: Mount to all requests or specific endpoints to define routes.
@@ -57,7 +57,7 @@ router.post('/', function (req, res) {
 });
 ```
 
-## Explain, using relevant examples, how to implement sessions, and the legal implications of doing this.
+>## Explain, using relevant examples, how to implement sessions, and the legal implications of doing this.
 To enable the use of the session we have to require the module `express-session`. This module was earlier integrated into Express.js but was removed to make the framework more lightweight:
 ```javascript
 var session = require('express-session');
@@ -80,7 +80,7 @@ To retrieve the session, we can do the following on the `req` object, and also a
 
 A cookie consent has to be implemented on the site, if the cookie is used to track user behaviour.
 
-## Compare the express strategy toward (server side) templating with the one you used with Java on second semester.
+>## Compare the express strategy toward (server side) templating with the one you used with Java on second semester.
 Node.JS and Express uses templating engines like Handlebars, Jade and EJS. Java uses templating engines like JSP. Java was never made to be suitable for web applications, and JSP is often seen as a makeshift solution.
 
 **MVC**:
@@ -128,7 +128,7 @@ Java + JSP
 ```
 - Conclusion: use node.js Express for server side templating.
 
-## Explain, using a relevant examples, your strategy for implementing a REST-API with Node/Express and show how you can "test" all the four CRUD operations programmatically using for example the Request package.
+>## Explain, using a relevant examples, your strategy for implementing a REST-API with Node/Express and show how you can "test" all the four CRUD operations programmatically using for example the Request package.
 I first implemented a router.get api for a joke here:
 - [api.js](https://github.com/KongBoje/Hand-in-2/blob/master/expressJokes/routes/api.js)
 
@@ -140,7 +140,7 @@ And handled it in App.js:
 
 angular part: TBD
 
-## Explain, using relevant examples, about testing JavaScript code, relevant packages (Mocha etc.) and how to test asynchronous code.
+>## Explain, using relevant examples, about testing JavaScript code, relevant packages (Mocha etc.) and how to test asynchronous code.
 Mocha: Mocha is a test framework running on Node.js and can be used to test synchronous and asynchronous functions. Mocha tests run serially, allowing for flexible and accurate reporting, while mapping uncaught exceptions to the correct test cases. -> "describe" + "it".
 
 Chai: Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework. -> "should" + "expect" + "assert". request: Request is designed to be the simplest way possible to make http calls. It supports HTTPS and follows redirects by default.
@@ -202,7 +202,7 @@ describe('hooks', function() {
 });
 ```
 
-## Explain, using relevant examples, different ways to mock out databases, HTTP-request etc.
+>## Explain, using relevant examples, different ways to mock out databases, HTTP-request etc.
 I have used this mock test to test a GET method using chai but also using Nock.
 
 Nock is a Node module for mocking HTTP requests. With Nock you can mock a HTTP request and make it always return a specific result.

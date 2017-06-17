@@ -138,7 +138,10 @@ Aswell as two GET requests and a POST request in the index.js:
 And handled it in App.js:
 - [App.js](https://github.com/KongBoje/Hand-in-2/blob/master/expressJokes/app.js)
 
-angular part: TBD
+angular part:
+- Haven't made an angular part for the exercise in this period, but made Handlebars, though I only made it to GET and POST jokes.
+- I have made an angular part in the mongoose exercise in period 3 though, where it uses all of the CRUD operations, though with a mongoose database added to it.
+- [View folder](https://github.com/KongBoje/Hand-in-2-Javascript-Express/tree/master/expressJokes/views)
 
 >## Explain, using relevant examples, about testing JavaScript code, relevant packages (Mocha etc.) and how to test asynchronous code.
 Mocha: Mocha is a test framework running on Node.js and can be used to test synchronous and asynchronous functions. Mocha tests run serially, allowing for flexible and accurate reporting, while mapping uncaught exceptions to the correct test cases. -> "describe" + "it".
